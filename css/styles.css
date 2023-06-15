@@ -1,0 +1,410 @@
+@charset "UTF-8";
+
+/* common */
+:root {
+    --font: 'Kaisei Opti', serif;
+    --bg: #f0f8ff;
+}
+
+html {
+    scrollbar-gutter: stable;
+}
+
+body {
+    /* scroll-behavior: smooth; */
+    box-sizing: border-box;
+    margin: 0 auto;
+    max-width: 1000px;
+    display: grid;
+    height: 100vh;
+    grid-template-rows: auto auto 1fr auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* header */
+header {
+    background: var(--bg);
+}
+
+header h1 {
+    max-width: 400px;
+    font-size: 0;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* menu */
+nav.menu {
+    background: var(--bg);
+}
+
+nav.menu ul {
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: var(--font);
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav.menu ul > li {
+    margin-right: 32px;
+    font-size: 16px;
+}
+
+
+
+/* main */
+main {
+    background: var(--bg);
+    padding-bottom: 144px;
+}
+
+/* ヒーローエリアのアニメーション */
+
+section.hero {
+    display: block;
+    margin: 0 auto;
+    max-width: 600px;
+    color: #fff;
+}
+
+@keyframes fade-hero {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+section.hero div {
+    font-family: var(--font);
+    font-size: 24px;
+    margin: 0 auto;
+    max-width: 600px;
+    height: 1000px;
+    background-image: url("https://user-images.githubusercontent.com/102784267/233598576-7e0246e9-3287-419a-b3aa-f0ad3465ae4d.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    animation: fade-hero 3s;
+}
+
+section.hero img {
+    display: block;
+    margin: 0 auto;
+}
+
+/* 商品紹介 */
+h2.introduction {
+    font-family: var(--font);
+    width: 150px;
+    text-align: center;
+    margin: 32px auto;
+}
+
+section.merchandise div.bread {
+    width: 500px;
+    margin: 32px auto;
+    text-align: center;
+}
+
+div.bread > p {
+    margin: 0 auto;
+    width: 400px;
+}
+
+div.bread > img {
+    cursor: pointer;
+}
+
+div.bread > h4 {
+    margin: 8px auto;
+}
+
+div.bread > p:last-child {
+    text-align: left;
+}
+
+div.bread > p.cart {
+    user-select: none;
+    cursor: pointer;
+    width: 150px;
+    margin: 8px auto;
+    background: orange;
+    border-radius: 4px;
+    font-weight: bold;
+    color: white;
+    box-shadow: 0 2px #ccc;
+}
+
+div.bread > p.cart:hover {
+    opacity: .8;
+}
+
+div.bread > p.cart:active {
+    width: 150px;
+    margin: 8px auto;
+    background: orange;
+    border-radius: 4px;
+    font-weight: bold;
+    color: white;
+    box-shadow: 0 0 #ccc;
+    transform: translateY(2px);
+}
+
+div.bread i {
+    padding-left: 4px;
+}
+
+/* モーダル */
+
+/* モーダルを開いたときの背景 */
+section.modal-bg {
+    visibility: visible;
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    opacity: .5;
+    background: #ccc;
+}
+
+/* モーダルを開いた時、スクロールをロックする */
+body.scroll-lock {
+    overflow: hidden;
+    scrollbar-gutter: stable;
+}
+
+/* モーダルのデフォルト */
+.default,
+.cart-default {
+    visibility: visible;
+    display: none;
+    opacity: 0;
+}
+
+div.modal,
+div.cart-modal {
+    position: fixed;
+    inset: 0;
+    margin: auto;
+    width: 410px;
+    height: 300px;
+    border:solid 1px #000;
+    background: #fff;
+}
+
+div.modal img {
+    display: block;
+    margin: 5px auto;
+}
+
+div.modal h2.close {
+    user-select: none;
+    cursor: pointer;
+    width: 100px;
+    text-align: center;
+    margin: 0 auto;
+    background: orange;
+    border-radius: 4px;
+    font-weight: bold;
+    color: white;
+    box-shadow: 0 2px #ccc;
+    pointer-events: auto;
+}
+
+div.modal h2.close:hover {
+    opacity: .8;
+}
+
+div.modal h2.close:active {
+    width: 100px;
+    text-align: center;
+    margin: 0 auto;
+    background: orange;
+    border-radius: 4px;
+    font-weight: bold;
+    color: white;
+    box-shadow: 0 0 #ccc;
+    transform: translateY(2px);
+}
+
+/* モーダルをふわっと表示するアニメーション */
+@keyframes fadeIn {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+.default.-visible,
+.cart-default.-visible {
+    display: block;
+    opacity: 1;
+    position: fixed;
+    inset: 0;
+    margin: auto;
+    animation: fadeIn 0.3s ease-in 0s forwards;
+}
+
+/* モーダル内の閉じるをクリックしたときのふわっと消えるアニメーション */
+@keyframes fadeOut {
+    0% {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    1% {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    100% {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+}
+
+/* ふわっと消すのを適用する要素 */
+.default.-visible.-hide,
+.cart-default.-visible.-hide {
+    visibility: hidden;
+    opacity: 0;
+    animation: fadeOut .3s ease-in .0s forwards;
+}
+
+/* 買い物かごモーダルのCSS */
+div.cart-modal {
+    overflow: hidden;
+    scrollbar-gutter: stable;
+
+}
+
+div.cart-modal h2 {
+    text-align: center;
+}
+
+div.cart-modal p {
+    user-select: none;
+    cursor: pointer;
+    width: 200px;
+    text-align: center;
+    margin: 32px auto;
+    background: #fb881b;
+    border-radius: 4px;
+    color: #fff;
+    box-shadow: 0 2px #ccc;
+    pointer-events: auto;
+}
+
+div.cart-modal p:hover {
+    opacity: .8;
+}
+
+div.cart-modal p:active {
+    width: 200px;
+    text-align: center;
+    background: orange;
+    border-radius: 4px;
+    font-weight: bold;
+    color: white;
+    box-shadow: 0 0 #ccc;
+    transform: translateY(2px);
+}
+
+/* お知らせ */
+section.notice {
+    max-width: 600px;
+    margin: 32px auto;
+}
+
+section.notice h2{
+    font-family: var(--font);
+    width: 150px;
+    text-align: center;
+    margin: 32px auto;
+}
+
+section.notice p {
+    width: 300px;
+    margin: 16px auto;
+    text-align:center;
+}
+
+section.notice p > a {
+    font-size: 48px;
+    margin-left: 8px;
+    color: #3b579d;
+}
+
+section.notice img {
+    display: block;
+    margin: 0 auto;
+} 
+
+/* 問い合わせフォーム */
+section.info {
+    max-width: 600px;
+    margin: 32px auto;
+}
+
+section.info h2 {
+    font-family: var(--font);
+    text-align: center;
+    
+}
+
+form.contact {
+    max-width: 600px;
+}
+
+dl {
+    width: 400px;
+    margin: 32px auto;
+}
+
+textarea {
+    resize: none;
+    width:300px;
+    height:300px;
+}
+
+h2.other {
+    width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h2.other a {
+    color: red;
+}
+
+
+/* footer */
+footer {
+    background: var(--bg);
+}
+
+footer p {
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    background: #000;
+}

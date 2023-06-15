@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ポートフォリオ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+Opti&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="https://user-images.githubusercontent.com/102784267/233595840-1d781f04-97ae-4f5b-b846-89edc94a0dfe.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1 class="sp">
+            <img src="https://user-images.githubusercontent.com/102784267/233591852-5038a6f2-c081-4106-8e9c-73ade640d303.png" width="80" alt="オーナー">
+            <img src="https://user-images.githubusercontent.com/102784267/233595845-fbb45d76-0f04-470f-ae9f-5760bde10c15.png" width="300" alt="店名">
+        </h1>
+    </header>
+    <nav class="menu">
+      <ul>
+        <li><a href="#items">商品一覧</a></li>
+        <li><a href="#tips">お知らせ</a></li>
+        <li><a href="#events">イベント情報</a></li>
+        <li><a href="#shop">店舗概要</a></li>
+        <li><a href="#question">お問い合わせ</a></li>
+      </ul>
+
+    </nav>
+    <main>
+        <!-- モーダル背景エリア -->
+        <section id="modal-bgarea"></section>
+
+        <!-- ヒーローエリア -->
+        <section class="hero">
+            <div>
+                懐かしの給食パンをお届け
+            </div>
+        </section>
+
+        <h2 id="items" class="introduction">商品一覧</h2>
+
+        <section class="merchandise">
+            <!-- 商品紹介 -->
+            <div class="bread">
+                <img src="https://user-images.githubusercontent.com/102784267/233601178-cb452c24-65bc-467b-97b2-3d3aedd85bfb.png" width="200" alt="コッペパン">
+                <img src="https://user-images.githubusercontent.com/102784267/233601151-2532484e-3459-4212-8175-be4b969b02f4.png" width="200" alt="コッペパン">
+              <h4><span class="item">コッペパン</span>（税込180円）</h4>
+              <p class="cart"><span class="cart-text">カートに入れる</span><i class="bi bi-cart4"></i></p>
+              <p>ツヤのあるふわふわのコッペパン。そのままでもやさしい甘みが自慢です。もちろん、ジャムをつけてもおいしくお召し上がりいただけます（レジ横でジャムも販売しています）。</p>
+            </div>
+        
+            <div class="bread">
+              <img src="https://user-images.githubusercontent.com/102784267/233601193-28c0e10e-dc6f-40d2-9e32-914018853afd.png" width="200" alt="ツイストパン">
+              <img src="https://user-images.githubusercontent.com/102784267/233601183-12ef8980-a0c9-4ee9-a32c-8fd920471304.png" width="200" alt="ツイストパン">
+              <h4><span class="item">ツイストパン</span> （税込170円）</h4>
+              <p class="cart"><span class="cart-text">カートに入れる</span><i class="bi bi-cart4"></i></p>
+              <p>モチモチとした食感が味わえます。卵とバターの風味を強く感じられるところが当店のこだわりポイント。オーブントースターで1分ほど焼いてからお召し上がりいただくのがおすすめです。</p>
+            </div>
+        
+            <div class="bread">
+              <img src="https://user-images.githubusercontent.com/102784267/233601136-8878fb1f-e9a0-4f76-9afb-58b204552a4c.png" width="200" alt="まるパン">
+              <img src="https://user-images.githubusercontent.com/102784267/233601133-d44c7d09-8744-4f63-8bdf-968f5ebe1402.png" width="200" alt="まるパン">
+              <h4><span class="item">まるパン</span>（税込160円）</h4>
+              <p class="cart"><span class="cart-text">カートに入れる</span><i class="bi bi-cart4"></i></p>
+              <p>あっさりとして素朴な味わいのシンプルなパンです。お好みでバターをつけたり、半分に割ってハンバーグやミネストローネと一緒に食べても最高です！</p>
+            </div>
+        </section>
+
+          <!-- モーダル -->
+            <!-- コッペパン -->
+            <div class="modal default">
+                <img src="https://user-images.githubusercontent.com/102784267/233601178-cb452c24-65bc-467b-97b2-3d3aedd85bfb.png" width="400" alt="コッペパン">
+                <h2 class="close">閉じる</h2>
+            </div>
+            <div class="modal default">
+                <img src="https://user-images.githubusercontent.com/102784267/233601151-2532484e-3459-4212-8175-be4b969b02f4.png" width="400" alt="コッペパン">
+                <h2 class="close">閉じる</h2>
+            </div>
+
+            <!-- ツイストパン -->
+            <div class="modal default">
+                <img src="https://user-images.githubusercontent.com/102784267/233601193-28c0e10e-dc6f-40d2-9e32-914018853afd.png" width="400" alt="ツイストパン">
+                <h2 class="close">閉じる</h2>
+            </div>
+            <div class="modal default">
+                <img src="https://user-images.githubusercontent.com/102784267/233601183-12ef8980-a0c9-4ee9-a32c-8fd920471304.png" width="400" alt="ツイストパン">
+                <h2 class="close">閉じる</h2>
+            </div>
+
+            <!-- まるパン -->
+            <div class="modal default">
+                <img src="https://user-images.githubusercontent.com/102784267/233601136-8878fb1f-e9a0-4f76-9afb-58b204552a4c.png" width="400" alt="まるパン">
+                <h2 class="close">閉じる</h2>
+            </div>
+            <div class="modal default">
+                <img src="https://user-images.githubusercontent.com/102784267/233601133-d44c7d09-8744-4f63-8bdf-968f5ebe1402.png" width="400" alt="まるパン">
+                <h2 class="close">閉じる</h2>
+            </div>
+
+            <!-- 買い物かごモーダル -->
+            <div class="cart-modal cart-default">
+              <div>
+                <h2>商品が追加されました</h2>
+                  <p>カートを見る<small>(未実装)</small></p>
+                       
+                  <p class="cancel">閉じる</p>
+              </div>
+            </div>
+
+            <section class="notice">
+                <h2 id="tips">お知らせ</h2>
+                <p>新製品の情報はこちらをチェック！</p>
+                <p>
+                  <a href="#"><i class="bi bi-twitter"></i></a>
+                  <a href="#"><i class="bi bi-instagram"></i></a>
+                  <a href="#"><i class="bi bi-facebook"></i></a>
+                </p>
+                <h2 id="events">イベント情報</h2>
+                <p>工事中</p>
+                <h2 id="shop">店舗概要</h2>
+                <p>屋号：給食ぱん屋</p>
+                <p>住所：東京都二五六区2-5-6</p>
+                <img src="https://user-images.githubusercontent.com/102784267/233602759-8d23b6ac-9fd1-4f72-a002-a90fbb27e67e.png" width="400">
+              </section>
+
+              <section class="info">
+                <h2 id="question">お問い合わせ</h2>
+                <form action="" class="contact">
+                  <dl>
+                    <dt>お名前</dt>
+                    <dd><input type="text" name="name"></dd>
+                    <dt>メールアドレス</dt>
+                    <dd><input type="email" name="email"></dd>
+                    <dt>お問い合わせ種別</dt>
+                    <dd>
+                      <select name="type">
+                        <option value="商品についてのお問い合わせ">商品についてのお問い合わせ</option>
+                        <option value="その他のお問い合わせ">その他のお問い合わせ</option>
+                      </select>
+                    </dd>
+                    <dt>お問い合わせ内容</dt>
+                    <dd><textarea name="message"></textarea></dd>
+                    <button type="submit">送信</button>
+                  </dl>
+                </form>
+              </section>
+              <h2 class="other">このサイトは<a href="https://256times.com/" target="_blank" rel="noopener">256times</a>「<a href="https://256times.com/courses/164" target="_blank" rel="noopener">フロントエンド案件修行 給食ぱん屋編</a>」で作成しています</h2>
+    </main>
+    
+    <footer>
+        <p>(c) 256times.com</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
